@@ -5,4 +5,3 @@ import router from './router' */
 init({
     render: h => h(App)
 })
-console.log(Math.random())

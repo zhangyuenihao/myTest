@@ -34,9 +34,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "~assets/style/variable.scss";
- .test-warp{
-     margin: 10px auto;
-     background:$background;
- }
 </style>

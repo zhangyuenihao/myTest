@@ -1,6 +1,8 @@
 
 import axios from 'axios'
 import qs from 'qs'
+import { getConfig } from './utils'
+const { url } = getConfig()
 
 const defaultConfig = {
     timeout: 10000,
@@ -28,6 +30,7 @@ instance.interceptors.request.use((config) => {
         var data = config.data
         config.data = qs.stringify(data)
     }
+    config.url = url + config.url
     return config
 }, (error) => {
     return Promise.reject(error)
@@ -54,4 +57,4 @@ export const post = (url, params, config = {}) => {
     return instance.post(url, params, { ...defaultConfig, ...config })
 }
 
-export default {}
+export default { get, post }

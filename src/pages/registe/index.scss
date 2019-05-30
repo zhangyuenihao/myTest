@@ -1,0 +1,32 @@
+$width:1200px;
+$height:756px;
+
+.login-warper{
+   position: relative;
+  height: 100%;
+  min-width: $width;
+  min-height: $height;
+  background: blue;
+
+  .main-content{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: $width;
+    height: $height;
+    background-color: #ffffff;
+    border-radius: 30px;
+
+    .login-icon{
+      flex: 1;
+      background: pink;
+    }
+    .login-form{
+      flex: 1;
+      background: yellow;
+    }
+  }
+
+}
