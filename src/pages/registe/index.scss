@@ -1,32 +1,150 @@
 $width:1200px;
 $height:756px;
-
-.login-warper{
-   position: relative;
-  height: 100%;
-  min-width: $width;
-  min-height: $height;
-  background: blue;
-
-  .main-content{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: $width;
-    height: $height;
-    background-color: #ffffff;
-    border-radius: 30px;
-
-    .login-icon{
-      flex: 1;
-      background: pink;
-    }
-    .login-form{
-      flex: 1;
-      background: yellow;
-    }
-  }
-
+.input-icon{
+  display: inline-block;
+  content: "";
+  width: 48px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
+
+.bg{
+   height: 100%;
+  background: url("./assets/image/bg2.png")no-repeat;
+
+  .login-warper{
+    position: relative;
+    height: 100%;
+    min-width: $width;
+    min-height: $height;
+    background: url("./assets/image/bg-icon.png") no-repeat center;
+
+    .main-content{
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: $width;
+      height: $height;
+      background-color: #ffffff;
+      border-radius: 30px;
+
+      .login-icon{
+        flex: 1;
+        background: url("./assets/image/login-icon.png") no-repeat center right;
+      }
+      .login-form{
+        flex: 1;
+
+        .title-warpe{
+          margin-top: 130px;
+          margin-bottom: 24px;
+
+          .form-title{
+            font-weight: normal;
+            margin-bottom: 0px;
+            font-size: 44px;
+            color: #333;
+          }
+
+          .title-tip{
+            font-size: 18px;
+            color: #a9a9a9;
+          }
+        }
+
+        .form-content{
+            .form-item{
+              width: 360px;
+              height: 92px;
+              line-height: 92px;
+
+              .form-input{
+                height: 100%;
+                vertical-align: middle;
+                color: #a9a9a9;
+                border-bottom: 2px solid #eeeeee;
+
+                input[type="text"]{
+                  outline: none;
+                  border: none;
+                  vertical-align: middle;
+                  width: 80%;
+                  &::placeholder{
+                    color: #a9a9a9;
+                  }
+                }
+
+              }
+              &.rember .form-input{
+                border-bottom: none;
+                position: relative;
+                cursor: pointer;
+                input{
+                  position: absolute;
+                  top: 38px;
+                  left: 20px;
+                  display: none;
+                }
+              }
+              &.user .form-input:before{
+                @extend .input-icon;
+                background: url("./assets/image/user-icon.png")no-repeat center center;
+              }
+
+              &.pwd .form-input:before{
+                @extend .input-icon;
+                background: url("./assets/image/pwd-icon.png") no-repeat center center;
+              }
+              &.rember .form-input:before{
+                @extend .input-icon;
+                background: url("./assets/image/check-icon.png") no-repeat center center;
+                cursor: pointer;
+              }
+              &.rember .form-input.active:after{
+                  @extend .input-icon;
+                  position: absolute;
+                  top: 38px;
+                  left: 20px;
+                  width: 6px;
+                  height: 10px;
+                  border-style: solid;
+                  border-color: #4f93fe;
+                  border-width: 0 2px 2px 0;
+                  transform: rotateZ(45deg);
+                  cursor: pointer;
+              }
+
+
+              button{
+                width: 320px;
+                height: 66px;
+                border: solid 1px #1a72fe;
+                outline: none;
+                background-color: #4f93fe;
+                font-size: 28px;
+                font-weight: normal;
+                color: #fff;
+                border-radius: 33px;
+                cursor: pointer;
+              }
+            }
+
+
+
+
+        }
+      }
+      .copyright{
+        position: absolute;
+        right: 116px;
+        bottom: 20px;
+        color: #a9a9a9;
+      }
+    }
+
+  }
+}
+

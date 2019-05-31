@@ -1,7 +1,7 @@
-
 import axios from 'axios'
 import qs from 'qs'
 import { getConfig } from './utils'
+import { Message } from 'element-ui'
 const { url } = getConfig()
 
 const defaultConfig = {
@@ -37,12 +37,19 @@ instance.interceptors.request.use((config) => {
 })
 // 请求响应拦截器
 instance.interceptors.response.use((res) => {
-    return res.data
+    if (res.data.code === 0) {
+        return res.data
+    }
+    Message({
+        message: res.data.message,
+        type: 'error'
+    })
+    return Promise.reject(res.data)
 }, (error) => {
-    /* Message({
+    Message({
         message: error.message,
         type: 'error'
-    }) */
+    })
     return Promise.reject(error)
 })
 
