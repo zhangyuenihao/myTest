@@ -1,0 +1,54 @@
+.warp {
+  width: 200px;
+  margin: 0 auto;
+
+  ul, h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .title {
+    height: 40px;
+    line-height: 40px;
+    background: #4f93fe;
+    padding-left: 10px;
+    color: #ffffff;
+    &:before{
+      display: inline-block;
+      content: "";
+      width:0;
+      height:0;
+      border-top:10px solid transparent;
+      border-bottom:10px solid transparent;
+      border-left:10px solid #bbb;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    &.active{
+      background: #1a72fe;
+    }
+  }
+
+  .item-list {
+    border: 1px solid #ccc;
+    display: none;
+    .user {
+      height: 30px;
+      line-height: 30px;
+      padding-left: 40px;
+      border: 1px solid #cccccc;
+      &.active{
+        background: yellowgreen;
+      }
+      &:hover{
+        background: yellow;
+      }
+    }
+
+  }
+
+}

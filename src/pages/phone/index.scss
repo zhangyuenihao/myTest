@@ -1,0 +1,53 @@
+.my-phone{
+  position: relative;
+  margin: 0 auto;
+  width: 289px;
+  height: 594px;
+  background: url("./assets/phone-icon.png");
+}
+
+.msg-content{
+  position: absolute;
+  top: 84px;
+  left: 24px;
+  right: 24px;
+  bottom: 140px;
+}
+
+.icon{
+  display: inline-block;
+  width: 25px;
+  height: 29px;
+  &.icon-1{
+    background: url("./assets/user1.png") no-repeat;
+  }
+  &.icon-2{
+    background: url("./assets/user2.png") no-repeat;
+  }
+}
+.msg-item{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  .msg-icon{
+    margin-top: 8px;
+  }
+  .msg{
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  &.msg-left{
+    .msg{
+      background: yellow;
+    }
+  }
+
+  &.msg-right{
+    flex-direction: row-reverse;
+    .msg{
+      background: bisque;
+    }
+  }
+}
