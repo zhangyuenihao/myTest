@@ -18,9 +18,9 @@ window.onload = function () {
     oldCircle = circle[num]
 
     function init(num) {
+        imgIcon[0].src = arrUrl[num]
         oldCircle.className = 'circle'
         circle[num].className += ' active'
-        imgIcon[0].src = arrUrl[num]
         oldCircle = circle[num]
     }
 
