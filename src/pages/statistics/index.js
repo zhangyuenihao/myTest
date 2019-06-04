@@ -1,3 +1,57 @@
+const dataArray = [
+    {
+        name: '卫生巾',
+        count: 0,
+        price: 13.6
+    }, {
+        name: 'weishengzhi',
+        count: 0,
+        price: 12.6
+    }, {
+        name: 'zhichou',
+        count: 0,
+        price: 10.6
+    }, {
+        name: 'xiyifen',
+        count: 0,
+        price: 11.6
+    }
+]
+
+function getMax (dataArray) {
+    let max = 0
+    for (let val of dataArray) {
+        if (val.count > 0) {
+            max = val.price > max ? val.price : max
+        }
+    }
+    return max
+}
+
+// xuanrangouwuw
+function renderStore (dataArray) {
+
+}
+
+
+function lessCount(index){
+   if(dataArray[index].count>0){
+       dataArray[index].count--;
+   }
+   getMax(dataArray);
+}
+
+function addCount(){
+
+}
+
+
+/*
+const maxPrice = dataArray.reduce((prev, current) => {
+    return current > prev ? current : prev
+}, 0)
+*/
+
 window.onload = function () {
     var oul = document.getElementsByTagName('ul')[0]
     var oLi = oul.getElementsByTagName('li')
@@ -9,14 +63,14 @@ window.onload = function () {
     var maxprice = 0
     var arr = [0]
 
-    function init(li, index) {
+    function init (li, index) {
         var btn = li.getElementsByTagName('input')
         var oStrong = li.getElementsByTagName('strong')[0]
         var span = li.getElementsByTagName('span')
         var num = 0
         var price = 0
 
-        function rander() {
+        function rander () {
             arrNum[index] = num
             oStrong.innerHTML = arrNum[index]
             span[0].innerHTML = arrPrice[index] + '元'
@@ -52,5 +106,4 @@ window.onload = function () {
     for (var i = 0; i < oLi.length; i++) {
         init(oLi[i], i)
     }
-
 }
