@@ -1,0 +1,132 @@
+.warp {
+  width: 300px;
+  overflow: hidden;
+  margin: 100px auto;
+  background: #DEE7E7;
+  padding: 0 10px;
+
+  ul, p, h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .title {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+
+    h3 {
+      flex: 4;
+      padding-left: 15px;
+      border-bottom: 1px solid #94BDD6;
+      color: #103142;
+    }
+
+    .button-warp {
+      flex: 3;
+      display: flex;
+
+      width: 150px;
+      line-height: 30px;
+      height: 30px;
+      margin-top: 20px;
+
+      .button {
+        text-align: center;
+        flex: 1;
+        border: 1px solid #94BDD6;
+        border-right: none;
+
+        &:last-child {
+          border-right: 1px solid #94BDD6;
+        }
+
+        &.active{
+          background: #ffffff;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .main-warp {
+    height: 400px;
+
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      height: 370px;
+      line-height: 30px;
+
+      .item {
+        flex: 1;
+        height: 100%;
+        overflow: hidden;
+        border-bottom: 1px dotted #ffffff;
+        cursor: pointer;
+
+        &.detail {
+          display: none;
+        }
+
+        .order {
+          display: inline-block;
+          width: 24px;
+          height: 20px;
+          background: #29739C;
+          text-align: center;
+          color: #ffff;
+          line-height: 20px;
+          margin: 5px 10px 0 0;
+        }
+
+        .detail .order {
+          vertical-align: top;
+        }
+
+        .text {
+          width: 260px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          white-space:nowrap;
+          display: inline-block;
+        }
+
+        .img-warp {
+          display: inline-block;
+        }
+
+
+        &.active{
+          flex: 3;
+          background: #ffffff;
+
+          .introduce {
+            &.brief {
+              display: none;
+            }
+
+            &.detail {
+              display: block;
+            }
+
+          }
+        }
+
+
+      }
+    }
+
+    .footer {
+      .more {
+        display: block;
+        line-height: 30px;
+        text-align: right;
+      }
+    }
+  }
+}
