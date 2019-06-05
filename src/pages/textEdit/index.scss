@@ -1,0 +1,88 @@
+.warp {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .title {
+    height: 30px;
+    background: green;
+    color: #ffffff;
+    line-height: 30px;
+    padding-left: 30px;
+  }
+
+  .main {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+
+    .item {
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      overflow: hidden;
+      border-bottom: 1px solid darkseagreen;
+
+
+      .list {
+        position: absolute;
+        padding-left: 30px;
+        height: 100%;
+        top: 0px;
+        left: 0;
+
+        .item-list {
+          height: 40px;
+          line-height: 40px;
+
+          &.showView {
+            .msg {
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            .edit-icon {
+              display: inline-block;
+              width: 21px;
+              height: 23px;
+              background: url("/images/textEdit/edit.png") no-repeat center center;
+              vertical-align: middle;
+              margin-left: 20px;
+              cursor: pointer;
+            }
+          }
+
+          &.edit {
+            .text {
+              border: 1px solid green;
+              padding: 6px 0;
+
+              &:focus {
+                outline: none;
+                border: 1px solid darkorange;
+              }
+            }
+
+            input[type="button"] {
+              padding: 4px;
+              background: none;
+              border: none;
+              outline: none;
+              color: green;
+              cursor: pointer;
+              &:hover{
+                background: green;
+                color: #ffffff;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}

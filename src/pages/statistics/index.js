@@ -1,3 +1,4 @@
+/*
 const dataArray = [
     {
         name: '卫生巾',
@@ -18,7 +19,7 @@ const dataArray = [
     }
 ]
 
-function getMax (dataArray) {
+function getMax(dataArray) {
     let max = 0
     for (let val of dataArray) {
         if (val.count > 0) {
@@ -29,21 +30,22 @@ function getMax (dataArray) {
 }
 
 // xuanrangouwuw
-function renderStore (dataArray) {
+function renderStore(dataArray) {
 
 }
 
 
-function lessCount(index){
-   if(dataArray[index].count>0){
-       dataArray[index].count--;
-   }
-   getMax(dataArray);
+function lessCount(index) {
+    if (dataArray[index].count > 0) {
+        dataArray[index].count--;
+    }
+    getMax(dataArray);
 }
 
-function addCount(){
+function addCount() {
 
 }
+*/
 
 
 /*
@@ -63,14 +65,14 @@ window.onload = function () {
     var maxprice = 0
     var arr = [0]
 
-    function init (li, index) {
+    function init(li, index) {
         var btn = li.getElementsByTagName('input')
         var oStrong = li.getElementsByTagName('strong')[0]
         var span = li.getElementsByTagName('span')
         var num = 0
         var price = 0
 
-        function rander () {
+        function rander() {
             arrNum[index] = num
             oStrong.innerHTML = arrNum[index]
             span[0].innerHTML = arrPrice[index] + '元'
