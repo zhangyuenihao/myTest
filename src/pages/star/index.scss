@@ -1,5 +1,7 @@
 .warp {
   width: 500px;
+  border: 1px solid #cccccc;
+  margin: 100px auto;
   overflow: hidden;
 
   .evalueation {
@@ -38,6 +40,7 @@
       height: 100%;
       float: left;
       margin-left: 10px;
+      color: orange;
 
       .tip {
         height: 100%;
