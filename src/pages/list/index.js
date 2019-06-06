@@ -77,11 +77,12 @@ window.onload = function () {
     let oldItem
     let oldButton
     let arrBtn = ['dayText', 'weekText', 'allText']
+
     /**
      * 渲染初始页面
      * */
 
-    function init() {
+    function init () {
         for (let i = 0; i < 10; i++) {
             itemList.innerHTML += '<li class="item">\n' +
                 '                <div class="introduce brief">\n' +
@@ -101,28 +102,31 @@ window.onload = function () {
         oldButton = oButton[0]
         oldButton.classList.add('active')
         arr = dataArry.sort(sortBy(arrBtn[0]))
-        for (var i = 0; i < oItem.length; i++) {
+        for (let i = 0; i < oItem.length; i++) {
             initItem(oItem[i], i)
         }
     }
+
     init()
 
     /**
      * 渲染点击button按钮
      */
 
-
-    for (var i = 0; i < oButton.length; i++) {
+    for (let i = 0; i < oButton.length; i++) {
         oButton[i].index = i
         oButton[i].onclick = function () {
+            console.log(oldItem)
+            arr = dataArry.sort(sortBy(arrBtn[this.index]))
             oldButton.classList.remove('active')
             this.classList.add('active')
             oldButton = this
-            arr = dataArry.sort(sortBy(arrBtn[this.index]))
-            for (var i = 0; i < oItem.length; i++) {
+            oldItem.classList.remove('active')
+            oItem[0].classList.add('active')
+            oldItem = oItem[0]
+            for (let i = 0; i < oItem.length; i++) {
                 initItem(oItem[i], i)
             }
-
         }
     }
 
@@ -131,20 +135,20 @@ window.onload = function () {
      * @param item
      * @param index
      */
-    function initItem(item, index) {
+    function initItem (item, index) {
         let brief = item.getElementsByClassName('brief')[0]
         let text = brief.getElementsByClassName('text')[0]
         let imgWarp = item.getElementsByClassName('img-warp')[0]
         let img = imgWarp.getElementsByTagName('img')[0]
-
         text.innerHTML = arr[index].text
         img.src = arr[index].imgUrl
-        item.onclick = function () {
-            oldItem.classList.remove('active')
-            item.classList.add('active')
-            oldItem = this
-        }
 
+        item.onclick = function () {
+            /* oldItem.classList.remove('active')
+             item.classList.add('active')
+             oldItem = this */
+            addActive(item, oldItem)
+        }
     }
 
     /**
@@ -152,7 +156,7 @@ window.onload = function () {
      * @param attr
      * @returns {function(*, *): number}
      */
-    function sortBy(attr) {
+    function sortBy (attr) {
         return function (a, b) {
             a = a[attr]
             b = b[attr]
@@ -160,5 +164,12 @@ window.onload = function () {
         }
     }
 
-
+    /**
+     * 删除之前元素的class给现在元素添加active
+     *
+     */
+    function addActive (el, oldEl) {
+        oldEl.classList.remove('active')
+        el.classList.add('active')
+    }
 }

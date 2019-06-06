@@ -1,0 +1,49 @@
+.warp {
+  width: 500px;
+  overflow: hidden;
+
+  .evalueation {
+    height: 60px;
+    line-height: 60px;
+
+    .text {
+      float: left;
+      margin-right: 10px;
+
+      &:before {
+        display: inline-block;
+        content: '*';
+        color: red;
+
+      }
+
+    }
+
+    .star-warp {
+      float: left;
+
+      .star {
+        display: inline-block;
+        vertical-align: middle;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+    }
+
+    .msg {
+      width: 240px;
+      height: 100%;
+      float: left;
+      margin-left: 10px;
+
+      .tip {
+        height: 100%;
+        background: url("/images/star/tips.png") no-repeat center center;
+      }
+
+    }
+  }
+}
