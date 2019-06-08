@@ -1,0 +1,134 @@
+.warp {
+  width: 600px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 4px #ccc;
+  margin: 100px auto;
+  padding: 10px;
+  border-radius: 5px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .nav {
+    overflow: hidden;
+    padding: 5px;
+    border: 1px solid #21639C;
+    border-radius: 5px;
+    background: linear-gradient(#739CBD, #215A9C);
+    color: #ffffff;
+
+
+    .list {
+      float: left;
+
+      .item {
+        height: 100%;
+        float: left;
+        border-right: 1px solid #10426B;
+        border-left: 1px solid #ffffff;
+        cursor: pointer;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        .title {
+          border-radius: 5px;
+          margin: 0 20px;
+          padding: 2px 15px;
+        }
+
+        &.active {
+          .title {
+            background: #7B9CC6;
+          }
+        }
+
+      }
+    }
+
+    .more {
+      float: right;
+      margin-right: 20px;
+      padding: 2px 0;
+    }
+  }
+
+  .sub-nav {
+    position: relative;
+    height: 40px;
+    width: 100%;
+
+    .sub-warp {
+      position: relative;
+      display: none;
+      height: 100%;
+
+      .sub-list {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        border: 1px solid #94B5D6;
+        background: linear-gradient(#ffffff, #DEE7EF);
+        border-radius: 5px;
+        padding: 5px 20px;
+        color: #215A9C;
+
+        .sub-item {
+          float: left;
+          padding: 0 10px;
+          border-right: 1px solid #7B5AB5;
+
+          .sub-title {
+            display: inline-block;
+
+            &:hover {
+              padding-bottom: 2px;
+              border-bottom: 2px solid #215A9C;
+            }
+          }
+        }
+
+
+      }
+
+      .btn {
+        display: inline-block;
+        position: absolute;
+        left: 40px;
+        top: -2px;
+
+        &:before, &:after {
+          position: absolute;
+          content: '';
+          border-top: 6px transparent dashed;
+          border-left: 6px transparent dashed;
+          border-right: 6px transparent dashed;
+          border-bottom: 6px #fff solid;
+        }
+
+        &:before {
+          border-bottom: 6px #0099CC solid;
+        }
+
+        &:after {
+          top: 1px;
+          border-bottom: 6px #fff solid;
+        }
+
+      }
+    }
+
+
+  }
+}
