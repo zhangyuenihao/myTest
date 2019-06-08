@@ -1,0 +1,132 @@
+.warp {
+  width: 400px;
+  overflow: hidden;
+  margin: 100px auto;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 5px #cccccc;
+
+  .checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 100%;
+    background: url("/images/check/checkbox.png") no-repeat center center;
+    vertical-align: middle;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+
+  .checkbox.checked {
+    background-image: url("/images/check/check2.png");
+  }
+
+  .list {
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+    padding: 0;
+
+    .item {
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #ffffff;
+      list-style: none;
+
+      &.odd {
+        background: #F7FFFF;
+      }
+
+      &.evv {
+        background: #ffffff;
+      }
+
+      .song-name {
+        flex: 2;
+      }
+
+      .singer {
+        flex: 1;
+      }
+
+      &.active {
+        background: #efefef;
+
+        .checkbox {
+          background-image: url("/images/check/check2.png");
+        }
+      }
+    }
+
+  }
+
+  .button-warp {
+    padding: 5px 0;
+    line-height: 30px;
+
+    .selectAll {
+      .checkbox {
+        height: 22px;
+      }
+
+      &.active {
+        .checkbox {
+          background-image: url("/images/check/check2.png");
+        }
+      }
+    }
+
+
+    .btns {
+      float: right;
+
+      .btn {
+        outline: none;
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        color: #9c9c9c;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin-right: 10px;
+          background-repeat: no-repeat;
+          background-position: center;
+          vertical-align: top;
+        }
+
+        &.collection:before {
+          background-image: url("/images/check/collection1.png");
+        }
+
+        &.add:before {
+          background-image: url("/images/check/add1.png");
+        }
+
+        &.del:before {
+          background-image: url("/images/check/del1.png");
+        }
+
+        &.control {
+          color: #313131;
+
+          &.collection:before {
+            background-image: url("/images/check/collection2.png");
+          }
+
+          &.add:before {
+            background-image: url("/images/check/add2.png");
+          }
+
+          &.del:before {
+            background-image: url("/images/check/del2.png");
+          }
+        }
+      }
+    }
+
+  }
+}

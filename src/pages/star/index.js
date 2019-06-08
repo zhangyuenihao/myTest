@@ -49,7 +49,7 @@ window.onload = function () {
         oStar[i].index = i
 
         oStar[i].onmouseover = function () {
-            init(oStar[i].index)
+            init(oStar[i].index_bak)
         }
         oStar[i].onmouseout = function () {
             if (onOff) {
@@ -64,8 +64,8 @@ window.onload = function () {
         }
         oStar[i].onclick = function () {
             onOff = false
-            num = this.index
-            init(oStar[i].index)
+            num = this.index_bak
+            init(oStar[i].index_bak)
         }
     }
 }

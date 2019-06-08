@@ -117,7 +117,7 @@ window.onload = function () {
         oButton[i].index = i
         oButton[i].onclick = function () {
             console.log(oldItem)
-            arr = dataArry.sort(sortBy(arrBtn[this.index]))
+            arr = dataArry.sort(sortBy(arrBtn[this.index_bak]))
             oldButton.classList.remove('active')
             this.classList.add('active')
             oldButton = this

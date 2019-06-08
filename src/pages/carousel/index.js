@@ -44,15 +44,15 @@ window.onload = function () {
     for (var i = 0; i < circle.length; i++) {
         circle[i].index = i
         circle[i].onclick = function () {
-            num = this.index
+            num = this.index_bak
             init(num)
         }
         circle[i].onmouseover = function () {
-            num = this.index
+            num = this.index_bak
             thumbnail[num].style.display = 'block'
         }
         circle[i].onmouseout = function () {
-            num = this.index
+            num = this.index_bak
             thumbnail[num].style.display = 'none'
         }
     }

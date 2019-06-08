@@ -18,8 +18,8 @@ window.onload = function () {
             oldtitle.className = 'title'
             itemList[num].style.display = 'none'
             this.className += ' active'
-            itemList[this.index].style.display = 'block'
-            num = this.index
+            itemList[this.index_bak].style.display = 'block'
+            num = this.index_bak
         }
     }
     for (var i = 0; i < item.length; i++) {
@@ -35,7 +35,7 @@ window.onload = function () {
             olduser = arrUser[num2]
             olduser.className = 'user'
             this.className += ' active'
-            num2 = this.index
+            num2 = this.index_bak
         }
     }
 }
