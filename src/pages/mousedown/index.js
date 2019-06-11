@@ -85,7 +85,6 @@ window.onload = function () {
             insertAfter(time, text)
             imgWarp.appendChild(image)
             fragment.appendChild(li)
-            list.appendChild(fragment)
 
             if (item.itemTitle) {
                 itemTitle.innerText = item.itemTitle
@@ -100,7 +99,7 @@ window.onload = function () {
                 image.src = item.img
             }
         })
-
+        list.appendChild(fragment)
     }
 
     function bindEvent() {
