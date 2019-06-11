@@ -75,7 +75,6 @@ window.onload = function () {
      * 添加事件
      */
     function bindEvent() {
-
         navArr.forEach((item, index) => {
             function bindNav() {
                 n = 0
@@ -123,8 +122,6 @@ window.onload = function () {
             clearInterval(timer)
         }
         image.onmouseout = bindEvent
-
-
     }
 
     init()
