@@ -1,0 +1,51 @@
+.warp {
+  width: 400px;
+  overflow: hidden;
+  margin: 100px auto;
+  box-shadow: 0 0 5px #000000;
+  padding: 5px;
+
+  .main {
+    display: flex;
+    padding: 5px;
+    border: 1px solid #FF6300;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .list {
+      width: 80px;
+      line-height: 30px;
+      text-align: center;
+
+      .item {
+        height: 30px;
+        border: 1px solid #FFADAD;
+        background: linear-gradient(#ffffff, #FFF7F7 50%, #FFE7EF 90%);
+        margin-bottom: 2px;
+        &.active{
+          background: linear-gradient(#FFADAD,#FF4A6B);
+        }
+      }
+      &.list-r{
+        display: flex;
+        flex-direction:column-reverse ;
+      }
+    }
+    .img-warp{
+     height: 237px;
+      flex: 1;
+      margin: 0 4px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
