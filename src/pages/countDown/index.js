@@ -7,7 +7,7 @@ const dataArray = [{
     info: '抗裂砂浆熬了电视剧历史记录开工建设路附近胜利大街科技管理会计萨克龙卷风楼上的看见看见',
     uPrice: '599.00'
 }, {
-    iNew: 'June 19,2019 14:59:06',
+    iNew: 'June 19,2019 14:59:00',
     image: '/images/countDown/product2.jpg',
     bgImg: '/images/countDown/product-bg.jpg',
     info: '抗裂砂浆熬了电视剧历史记录开工建设路附近胜利大街科技管理会计萨克龙卷风楼上的看见看见',
@@ -120,7 +120,7 @@ function bindEvent() {
 
 
         btn.onclick = function () {
-
+             clearInterval(timer)
             function fnTime() {
                 let iNew = new Date(dataArray[i].iNew)
                 let iNow = new Date()
