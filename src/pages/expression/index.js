@@ -61,6 +61,7 @@ function doMove(obj, attr, dir, target, pos, callback) {
         } else if (speed == target) {
             losecount++
             lose.innerHTML = '得分：' + losecount + '分'
+            obj.style.display = 'none'
             shake(main, 'top', 0, function (obj) {
                 s++
             })
