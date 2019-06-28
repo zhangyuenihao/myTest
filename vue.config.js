@@ -8,6 +8,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const pages = utils.setPages({})
 
 const isPro = process.env.NODE_ENV === 'production'
+const webpack = require('webpack')
 
 let baseUrl = '/'
 
@@ -17,8 +18,7 @@ module.exports = {
     productionSourceMap: true,
     pages,
 
-    css: {
-    },
+    css: {},
     chainWebpack: config => {
         config.module
             .rule('images')
@@ -52,7 +52,13 @@ module.exports = {
                     }),
 
                     // 使用包分析工具
-                    new BundleAnalyzerPlugin()
+                    new BundleAnalyzerPlugin(),
+                    // 引入外部类库
+                    new webpack.ProvidePlugin({
+                        $: 'jquery',
+                        jQuery: 'jquery',
+                        'windows.jQuery': 'jquery'
+                    })
                 ]
             }
         }

@@ -15,7 +15,8 @@
     "element-ui": "^2.9.1",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -28,6 +29,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "glob": "^7.1.2",
+    "jquery": "^3.4.1",
     "node-sass": "^4.9.0",
     "postcss-plugin-px2rem": "^0.8.1",
     "sass-loader": "^7.1.0",
