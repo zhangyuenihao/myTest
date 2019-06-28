@@ -16,7 +16,7 @@
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "jquery": "^3.4.1"
+    "webpack-jquery-ui": "^2.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
