@@ -1,0 +1,45 @@
+.warper{
+  height: 40px;
+  background: #01204F;
+  .nav {
+    height: 40px;
+    line-height: 40px;
+    width: 1200px;
+    margin: 100px auto;
+    position: relative;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 40px;
+      background: #CC0000;
+    }
+
+    .list {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .item {
+        position: relative;
+        float: left;
+        list-style: none;
+        height: 100%;
+        span {
+          display: inline-block;
+          height: 100%;
+          padding: 0 15px;
+          color: #ffffff;
+        }
+      }
+
+      .item.cur {
+        height: 100%;
+        background: #CC0000;
+      }
+    }
+  }
+}
