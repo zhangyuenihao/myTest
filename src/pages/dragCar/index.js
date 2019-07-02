@@ -1,8 +1,11 @@
 import './index.scss'
 import $ from 'jquery'
-
-require('webpack-jquery-ui')
-require('webpack-jquery-ui/css')
+// vue.cli 引入jquery插件jquery-ui
+//require('webpack-jquery-ui')
+//require('webpack-jquery-ui/css')
+//为了保持风格统一用import
+import 'jquery-ui/ui/widgets/draggable'
+import 'jquery-mousewheel'
 
 const imgArray = ['/images/dragCar/1.jpg', '/images/dragCar/2.jpg', '/images/dragCar/3.jpg', '/images/dragCar/4.jpg', '/images/dragCar/5.jpg']
 let len = imgArray.length - 1
@@ -41,7 +44,7 @@ function bindEvent() {
                     $('.item').eq(idx).stop(true).fadeIn(50)
                 })
             }
-            $('.btn').css('left', range * idx+ 'px')
+            $('.btn').css('left', range * idx + 'px')
 
         }
     })
@@ -51,7 +54,7 @@ function bindEvent() {
         }
         let oldidx = idx
 
-        idx = parseInt(event.offsetX/ range)
+        idx = parseInt(event.offsetX / range)
         console.log(idx)
         if (oldidx != idx) {
             $('.item').eq(oldidx).stop(true).fadeOut(50, function () {
@@ -60,6 +63,25 @@ function bindEvent() {
         }
         $('.btn').css('left', range * idx + 'px')
     })
+    //鼠标滚轮事件
+    $('.warper').mousewheel(function (event, delta) {
+        event.preventDefault()
+        let oldidx = idx
+
+        idx += delta
+        if (idx > len) {
+            idx = len
+        } else if (idx < 0) {
+            idx = 0
+        }
+        if (oldidx != idx) {
+            $('.item').eq(oldidx).stop(true).fadeOut(50, function () {
+                $('.item').eq(idx).stop(true).fadeIn(50)
+            })
+        }
+        $('.btn').css('left', range * idx + 'px')
+    })
+
 }
 
 function init() {
