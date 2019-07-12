@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.warp{
+  position: relative;
+  width: 800px;
+  height: 400px;
+  box-shadow: 0 0 5px #cccccc;
+  margin: 100px auto;
+}
+p{
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color:blue ;
+}
