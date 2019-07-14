@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.girl {
+  position: absolute;
+  width: 79px;
+  height: 108px;
+  background: url("/images/girlWalk/girl.png") no-repeat;
+}
