@@ -68,7 +68,7 @@ Balloon.prototype.bomb = function () {
 }
 let balloonArray = []
 let frames = 0
-let second = 4
+let second = 60
 let totalScore = 0
 let Tframes = document.getElementsByClassName('t-frames')[0]
 let Tscore = document.getElementsByClassName('t-score')[0]

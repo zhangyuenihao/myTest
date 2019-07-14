@@ -1,8 +1,8 @@
 import './index.scss'
 
-function Girl(x, y, n, dx, dy) {
-    this.x = x
-    this.y = y
+function Girl(n, dx, dy) {
+    this.x = 0
+    this.y = Math.random() * 500
     this.dx = dx
     this.dy = dy
     this.num = 0
@@ -53,11 +53,11 @@ Girl.prototype.lose = function () {
     }
 }
 let girlArray = []
-new Girl(0, 200, 2, 10, 0)
+new Girl (2, 10, 0)
 let frames = 0
 let timer = setInterval(function () {
     frames++
-    frames % 40 == 0 && new Girl(0, 200, 2, 10, 0)
+    frames % 40 == 0 && new Girl( 2, 10, 0)
     for (let i = 0; i < girlArray.length; i++) {
         girlArray[i] && girlArray[i].update()
         girlArray[i] && girlArray[i].render()
