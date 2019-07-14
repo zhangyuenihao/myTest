@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: url("/images/balloon/bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .balloon {
+    width: 88px;
+    height: 119px;
+    background: url("/images/balloon/balloon.png") no-repeat;
+    position: absolute;
+    z-index: 2;
+  }
+  .total{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    line-height: 30px;
+    padding:30px ;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  #bgm{
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+}
