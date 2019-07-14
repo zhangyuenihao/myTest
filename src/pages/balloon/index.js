@@ -1,8 +1,12 @@
 import './index.scss'
 
-
+var W = document.documentElement.clientWidth;
+var H = document.documentElement.clientHeight;
+window.onresize = function () {
+    W = document.documentElement.clientWidth;
+    H = document.documentElement.clientHeight;
+}
 let w = 88
-let W = parseInt(document.body.clientWidth)
 let bgm = document.getElementById('bgm')
 let bom = document.getElementById('bom')
 
@@ -39,7 +43,7 @@ Balloon.prototype.init = function () {
 }
 Balloon.prototype.update = function () {
     this.y += this.dy
-    if (this.y > document.body.clientHeight) {
+    if (this.y > H) {
         bom.src = '/images/balloon/b.wav'
         this.bomb()
     }
