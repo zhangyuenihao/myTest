@@ -1,0 +1,55 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9B9B9B;
+}
+
+.warp {
+  width: 521px;
+  main-width: 521px;
+  margin: 100px auto;
+  position: relative;
+}
+
+table, tr, td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+table {
+  margin-left: 100px;
+  background: #ffffff;
+  box-shadow: 0 0 10px yellow;
+  min-width: 421px;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+}
+
+.snakeBody {
+  background: blue;
+}
+
+.snakeHead {
+  background: red;
+}
+
+.food {
+  background: yellowgreen;
+}
+
+.count {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+
+  line-height: 50px;
+}
