@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+table, tr, td {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+
+.warp {
+  position: relative;
+  width: 400px;
+  margin: 100px auto;
+  box-shadow: 0 0 10px #cccccc;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+}
+
+.info-warp {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 40px;
+
+  table {
+    margin: 0 auto;
+  }
+
+  span {
+    line-height: 30px;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+.block1 {
+  background: red;
+}
+
+.block2 {
+  background: orange;
+}
+
+.block3 {
+  background: yellow;
+}
+
+.block4 {
+  background: green;
+}
+
+.block5 {
+  background: cyan;
+}
+
+.block6 {
+  background: blue;
+}
+
+.block7 {
+  background: purple;
+}
