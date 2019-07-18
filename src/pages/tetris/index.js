@@ -58,6 +58,7 @@ document.onkeydown = function (event) {
             }
             break
     }
+    map.render()
 }
 let framesBox = document.getElementsByClassName('framesBox')[0]
 let timeBox = document.getElementsByClassName('timeBox')[0]
@@ -70,7 +71,7 @@ map.check()
 score += map.scoresArr[map.scores]
 let timer = setInterval(function () {
     frames++
-    if (frames % 2 == 0) {
+    if (frames % 10 == 0) {
         t++
     }
     //每帧清屏
@@ -81,14 +82,17 @@ let timer = setInterval(function () {
     }
 
     //如果不再往下走，固定住了，那么渲染到地图，产生一个新的block，产生新的预览图
-    if (!block.goDown()) {
-        block.renderMap()
-        //如果满行则消行
-        map.check()
-        score += map.scoresArr[map.scores]
-        block = new Block(pre, table, map)
-        pre = new Prevision(prevision)
+    if (frames % 10 == 0) {
+        if (!block.goDown()) {
+            block.renderMap()
+            //如果满行则消行
+            map.check()
+            score += map.scoresArr[map.scores]
+            block = new Block(pre, table, map)
+            pre = new Prevision(prevision)
+        }
     }
+
     if (!block.gameOver()) {
         clearInterval(timer)
     }
@@ -98,5 +102,5 @@ let timer = setInterval(function () {
     framesBox.innerHTML = '帧编号:' + frames
     timeBox.innerHTML = '时间：' + t + '秒'
     scoreBox.innerHTML = '分数：' + score + '分'
-}, 500)
+}, 100)
 

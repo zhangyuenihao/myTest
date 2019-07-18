@@ -16,11 +16,11 @@ function Prevision(id) {
  */
 Prevision.prototype.init = function () {
     //随机获取其中一种样式
-    this.type = this.arr[parseInt(Math.random() * (this.arr.length - 1))]
+    this.type = this.arr[parseInt(Math.random() * (this.arr.length))]
     //获取样式的所有矩阵
     this.allMaxtrix = BlockType[this.type]
     //随机获取样式的方向
-    this.direction = parseInt(Math.random() * (this.allMaxtrix.length - 1))
+    this.direction = parseInt(Math.random() * (this.allMaxtrix.length))
     this.maxtrix = this.allMaxtrix[this.direction]
 }
 /**

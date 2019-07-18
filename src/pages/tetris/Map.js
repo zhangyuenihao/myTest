@@ -41,7 +41,7 @@ Map.prototype.init = function () {
     ]
     this.last.forEach(item => {
         for (let i = 0; i < this.m; i++) {
-            let number = parseInt(Math.random() * 7)
+            let number = parseInt(Math.random() * 8)
             item.splice(i + 1, 1, number)
         }
     })
